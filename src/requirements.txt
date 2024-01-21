@@ -1,0 +1,6 @@
+python-decouple
+pandasai
+streamlit
+openai
+requests
+json
