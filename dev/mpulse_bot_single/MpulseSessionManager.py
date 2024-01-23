@@ -1,7 +1,7 @@
 import requests
 import json
 
-class MPulseSessionManager:
+class LimeSurveySessionManager:
     def __init__(self, username, password, base_url="https://limesurvey.sandbox.com"):
         self.base_url = base_url
         self.headers = {
