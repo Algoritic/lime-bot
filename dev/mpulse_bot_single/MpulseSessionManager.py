@@ -30,16 +30,3 @@ class MPulseSessionManager:
         else:
             # If the request was not successful, return None or raise an exception
             return None
-
-# Usage
-# username = "admin"
-# password = "M25+sP12D@M-pu1s3"
-# username = "pluginManager"
-# password = "w4Gu6ctRvCHm"
-# session = MPulseSessionManager(username, password)
-# session_key = session.get_session_key()
-
-# if session_key is not None:
-#     print("Session Key:", session_key)
-# else:
-#     print("Request failed or session key not found in the response.")
