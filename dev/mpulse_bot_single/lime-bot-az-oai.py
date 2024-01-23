@@ -10,16 +10,16 @@ from dotenv import load_dotenv
 import base64
 from FetchResults import *
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = ""
 
 # Get API key
 # OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
 
 def get_data(survey_id):
     # # get session key
-    username = "pluginManager"
-    password = "w4Gu6ctRvCHm"
-    session = MPulseSessionManager(username, password, base_url="https://mpulse.maybanksandbox.com")
+    username = ""
+    password = ""
+    session = MPulseSessionManager(username, password, base_url="https://limesurvey.sandbox.com")
     session_key = session.get_session_key()
 
     # run api to get survey responses
@@ -35,9 +35,9 @@ def get_data(survey_id):
 
 # Set OpenAI API key
 openai.api_key = OPENAI_API_KEY
-AZURE_OPENAI_API_KEY = "c939e1dcd3fb47399ef1a18f849631b3"
+AZURE_OPENAI_API_KEY = ""
 # Set page configuration and title for Streamlit
-st.set_page_config(page_title="M-Pulse Bot", page_icon="📄", layout="wide")
+st.set_page_config(page_title="Bot", page_icon="📄", layout="wide")
 
 # Add header with title and description
 st.markdown(
@@ -52,10 +52,10 @@ st.markdown(
 def chat_with_csv(df, prompt):
     # llm = OpenAI(api_token=OPENAI_API_KEY)
     llm = AzureOpenAI(api_token=AZURE_OPENAI_API_KEY,
-                      azure_endpoint="https://mbb-gen-ai.openai.azure.com/openai/deployments/gpt-35-t-16k/chat/completions?api-version=2023-07-01-preview",
-                      api_base="https://mbb-gen-ai.openai.azure.com/", 
-                      api_version="2023-06-01-preview", 
-                      deployment_name="gpt-35-t-16k", is_chat_model=True)
+                      azure_endpoint="",
+                      api_base="", 
+                      api_version="", 
+                      deployment_name="", is_chat_model=True)
     # pandas_ai = SmartDataframe(llm)
 
     # df = SmartDataframe(df, config={"llm": llm})
