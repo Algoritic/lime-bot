@@ -43,25 +43,3 @@ class MPulseAPI:
         response = requests.post(url, headers=self.headers, data=payload)
 
         return response
-
-# # get session key
-# username = "pluginManager"
-# password = "w4Gu6ctRvCHm"
-# session = MPulseSessionManager(username, password, base_url="https://mpulse-dev.maybanksandbox.com")
-# session_key = session.get_session_key()
-
-# # run api to get survey responses
-
-# api = MPulseAPI()
-# method = "export_responses"
-# params = [session_key, 957272, "csv", "en", "complete"]
-
-# response = api.make_request(method, params)
-# response_data = response.json()
-# results = Process.decode_base64_from_dict(response_data)
-# # print(results)
-
-# if response.status_code == 200:
-#     print(response.text)
-# else:
-#     print("Request failed with status code", response.status_code)
