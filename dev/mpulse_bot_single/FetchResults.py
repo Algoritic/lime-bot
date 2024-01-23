@@ -1,6 +1,6 @@
 import requests
 import json
-from MpulseSessionManager import MPulseSessionManager
+from LimeSurveySessionManager import LimeSurveySessionManager
 import base64
 
 class Process:
@@ -25,8 +25,8 @@ class Process:
         except Exception as e:
             return f"An error occurred during decoding: {e}"
         
-class MPulseAPI:
-    def __init__(self, base_url="https://mpulse.maybanksandbox.com"):
+class LimeSurveyAPI:
+    def __init__(self, base_url="https://limesurvey.sandbox.com"):
         self.base_url = base_url
         self.headers = {
             'Content-Type': 'application/json'
