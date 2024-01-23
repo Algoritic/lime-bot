@@ -2,7 +2,7 @@ import requests
 import json
 
 class MPulseSessionManager:
-    def __init__(self, username, password, base_url="https://mpulse.maybanksandbox.com"):
+    def __init__(self, username, password, base_url="https://limesurvey.sandbox.com"):
         self.base_url = base_url
         self.headers = {
             'Content-Type': 'application/json'
